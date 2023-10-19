@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado Polialfabetico - Mel Surikun</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <p align="left">5IV7 Mel Surikun</p>
+    <h1>CIFRADOS POLIALFABÉTICOS</h1>
+    <div>
+        <h3 align="center">MENSAJE:</h3>
+        <p><input type="text" id="mensaje" size="4" required></p>
+        <div style="width: 50%; float: left;">
+            <h2>CIFRADO CÉSAR</h2>
+            <p>DESPLAZAMIENTO: </p>
+            <input type="text" id="inputTexto" name="inputTexto" placeholder="Texto">
+            <input type="number" id="desplazamiento" name="inputNumero" placeholder="Número">
+            <p>
+                <button type="button" id="" class="boton">Cifrar por letras</button>
+                <button type="button" id="" class="boton">Descifrar</button>
+                <button type="button" id="cifrar" class="boton">Cifrar por numeros</button>
+                <button type="button" id="descifrar" class="boton">Descifrar</button>
+
+            </p>
+                <h3 align="center">MENSAJE CIFRADO/DESCIFRADO:</h3>
+                <p>
+                    <input type="text" id="mensaje1">
+                    <input type="text" id="mensaje2">
+                </p>
+            </p>
+            <p><button type="button" id="limpiar1" onclick="limpiar()">Limpiar Campos</button></p>
+        </div>
+        <div style="width: 50%; float: left;">
+            <h2>CIFRADO VIGGENERE</h2>
+            <p>DESPLAZAMIENTO: </p>
+            <input type="text" name="posicionamiento" id="txtClave" onpaste="return false;" ondrop="return false;" placeholder="Texto">
+            <p>
+                <button type="button" value="Cifrar" class="boton" onclick="longitudCifrar()">Cifrar por letras</button>
+                <button type="button" value="Descifrar" class="boton" onclick="longitudDescifrar()">Descifrar</button>
+                <button type="button" value="Reiniciar" class="boton" onclick="reiniciar()">Reiniciar</button>
+            </p>
+            <h3 align="center">MENSAJE CIFRADO/DESCIFRADO:</h3>
+            <p>
+                <input type="text" id="res" onpaste="return false;" ondrop="return false;">
+            </p>
+            <p>
+                <input type="button" class="boton" value="Copiar" onclick="colocar()">
+                <button type="button" class="boton" id="limpiar" onclick="limpiar()">Limpiar Campos</button>
+            </p>
+        </div>
+    </div>    
+    <script src="./js/cesarnum.js"></script>
+    <script src="./js/viggenere.js" ></script>
+</body>
+</html>
