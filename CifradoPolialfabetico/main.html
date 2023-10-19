@@ -11,12 +11,12 @@
     <h1>CIFRADOS POLIALFABÉTICOS</h1>
     <div>
         <h3 align="center">MENSAJE:</h3>
-        <p><input type="text" id="mensaje" size="4" required></p>
+        <p><input type="text" id="mensaje" size="4" oninput="validarTexto(this)" required></p>
         <div style="width: 50%; float: left;">
             <h2>CIFRADO CÉSAR</h2>
             <p>DESPLAZAMIENTO: </p>
-            <input type="text" id="inputTexto" name="inputTexto" placeholder="Texto">
-            <input type="number" id="desplazamiento" name="inputNumero" placeholder="Número">
+            <input type="text" id="desplaza" name="inputTexto" placeholder="Texto" oninput="validarTexto(this)" onpaste="return false;" ondrop="return false;">
+            <input type="number" id="desplazamiento" name="inputNumero" placeholder="Número" oninput="permitirSoloNumeros(this)" onpaste="return false;" ondrop="return false;">
             <p>
                 <button type="button" id="" class="boton">Cifrar por letras</button>
                 <button type="button" id="" class="boton">Descifrar</button>
@@ -30,12 +30,16 @@
                     <input type="text" id="mensaje2">
                 </p>
             </p>
-            <p><button type="button" id="limpiar1" onclick="limpiar()">Limpiar Campos</button></p>
+            <p>
+                <input type="button" class="boton" value="Copiar" onclick="colocar3()">
+                <input type="button" class="boton" value="Copiar" onclick="colocar2()">
+            </p>
+            <p><button type="button" id="limpiar" onclick="limpiar()">Limpiar Campos</button></p>
         </div>
         <div style="width: 50%; float: left;">
             <h2>CIFRADO VIGGENERE</h2>
             <p>DESPLAZAMIENTO: </p>
-            <input type="text" name="posicionamiento" id="txtClave" onpaste="return false;" ondrop="return false;" placeholder="Texto">
+            <input type="text" name="posicionamiento" id="txtClave" onpaste="return false;" ondrop="return false;" oninput="validarTexto(this)" placeholder="Texto">
             <p>
                 <button type="button" value="Cifrar" class="boton" onclick="longitudCifrar()">Cifrar por letras</button>
                 <button type="button" value="Descifrar" class="boton" onclick="longitudDescifrar()">Descifrar</button>
@@ -47,11 +51,9 @@
             </p>
             <p>
                 <input type="button" class="boton" value="Copiar" onclick="colocar()">
-                <button type="button" class="boton" id="limpiar" onclick="limpiar()">Limpiar Campos</button>
             </p>
         </div>
     </div>    
-    <script src="./js/cesarnum.js"></script>
-    <script src="./js/viggenere.js" ></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

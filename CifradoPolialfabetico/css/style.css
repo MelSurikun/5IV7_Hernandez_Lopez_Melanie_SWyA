@@ -52,6 +52,19 @@ input[type="number"] {
     padding: 7px 8px;
 }
 
+input[type="button"] {
+    font-size: 15px;
+    background-color: #e7e7e7; color: black;
+    border-radius: 5px;
+    border-color: #ccc;
+
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    max-width: 100%;
+    outline: none;
+    padding: 7px 8px;
+}
+
 button{
     font-size: 15px;
     background-color: #e7e7e7; color: black;
