@@ -25,5 +25,3 @@ function cifrado(){
 
 texto.addEventListener("keyup", cifrado);
 desplazamiento.addEventListener("change", cifrado);
-
-//github, falta descifrar

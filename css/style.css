@@ -25,7 +25,7 @@ body {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 300px;
+  height: 370px;
 }
 
 .swiper-slide::after {
@@ -92,3 +92,7 @@ body {
     font-size: 2rem;
   }
 }
+
+a{
+  color: black;
+ }
