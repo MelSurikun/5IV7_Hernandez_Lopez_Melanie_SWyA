@@ -15,18 +15,18 @@
         <div style="width: 50%; float: left;">
             <h2>CIFRADO CÉSAR</h2>
             <p>DESPLAZAMIENTO: </p>
-            <input type="text" id="desplaza" name="inputTexto" placeholder="Texto" oninput="validarTexto(this)" onpaste="return false;" ondrop="return false;">
-            <input type="number" id="desplazamiento" name="inputNumero" placeholder="Número" oninput="permitirSoloNumeros(this)" onpaste="return false;" ondrop="return false;">
+            <input type="text" id="clave" oninput="validarTexto(this)" onpaste="return false;" ondrop="return false;"  placeholder="Texto"  >
+            <input type="number" id="desplazamiento" name="desplazamiento" placeholder="Número" oninput="permitirSoloNumeros(this)" onpaste="return false;" ondrop="return false;">
             <p>
-                <button type="button" id="" class="boton">Cifrar por letras</button>
-                <button type="button" id="" class="boton">Descifrar</button>
+                <button type="button" class="boton" onclick="cifrarCesar()">Cifrar por letra</button>
+                <button type="button" class="boton" onclick="descifrarCesar()">Descifrar</button>
                 <button type="button" id="cifrar" class="boton">Cifrar por numeros</button>
                 <button type="button" id="descifrar" class="boton">Descifrar</button>
 
             </p>
                 <h3 align="center">MENSAJE CIFRADO/DESCIFRADO:</h3>
                 <p>
-                    <input type="text" id="mensaje1">
+                    <input type="text" id="resultado">
                     <input type="text" id="mensaje2">
                 </p>
             </p>
@@ -53,7 +53,8 @@
                 <input type="button" class="boton" value="Copiar" onclick="colocar()">
             </p>
         </div>
-    </div>    
+        <h3 align="right"><a href="/Principal.html">Regresar</a></h3>
+    </div>  
     <script src="./js/script.js"></script>
 </body>
 </html>
